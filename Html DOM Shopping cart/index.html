@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+</head>
+<body>
+    <header>
+        <h3>Welcome to our shop! What would you like to buy?</h3>
+    </header>
+    <h2>
+        You can chose and click any of the following items in <br> 
+        the table below and it will be added to your cart!
+    </h2>
+    <form name="info">
+        <table class="total">
+            <tr>
+                <td>Shopping Cart Total (CAD)</td>
+                <td id="total"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Reset" name="resetBtn" id="clear"></td>
+                <td><input type="submit" value="Submit" name="submitBtn"></td>
+            </tr>
+        </table>
+        <table class="items">
+            <tr>
+                <td>
+                    <h2>Items</h2>
+                </td>
+                <td>
+                    <h2>Value(CAD$)</h2>
+                </td>
+                <td>
+                    <h2>Amount</h2>
+                </td>
+                <td>
+                    <h2>Subtotal(CAD$)</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="image/duck.jpg" id="duck">
+                </td>
+                <td>
+                    <h2>11</h2>
+                </td>
+                <td>
+                    <h2 id = "items1"></h2>
+                </td>
+                <td>
+                    <h2 id="sub1"></h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img src="image/frog.jpg" id="frog">
+                </td>
+                <td>
+                    <h2>7.5</h2>
+                </td>
+                <td>
+                    <h2 id = "items2"></h2>
+                </td>
+                <td>
+                    <h2 id="sub2"></h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <img src="image/robot.jpg" id="robot">
+                </td>
+                <td>
+                    <h2>17</h2>
+                </td>
+                <td>
+                    <h2 id = "items3"></h2>
+                </td>
+                <td>
+                    <h2 id="sub3"></h2>
+                </td>
+            </tr>
+        </table>
+        
+        <fieldset>
+            <legend>Personal Info</legend>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" maxlength="10" mminlength="0">
+            <span id="fnameWarning" class="alert"></span></br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="LastName" id="lastName" maxlength="10" mminlength="0">
+            <span id="lnameWarning" class="alert"></span></br><br>
+
+            <label for="date">Birthday:</label>
+            <input type="date" id="date" name="date" min="1950-01-01">
+            <span id="dateWarning" class="alert"></span><br><br>
+
+            <label for="province">Province:</label>
+            <input list="provinces" name="province" id="province">
+            <datalist id="provinces">
+                <option value="Ontario">
+                <option value="Quebec">
+                <option value="Alberta">
+                <option value="British Columbia">
+                <option value="Manitoba">
+                <option value="New Brunswick">
+                <option value="Newfoundland and Labrador">
+                <option value="Nova Scotia">
+                <option value="Prince Edward Island">
+                <option value="Saskatchewan">
+            </datalist>
+            <span id="provinceWarning" class="alert"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Method</legend>
+                <input type="radio" name="payment" id="debit">Debit Card<br>
+                <input type="radio" name="payment" id="credit">Credit Card<br>
+                <input type="radio" name="payment" id="paypal">Paypal<br>
+                <span id="payment" class="alert"></span>
+        </fieldset>
+        <br>
+        <legend>Thank You</legend><br>
+        <label for="check">Click here to subscribe to our newsletter:</label>
+        <input type="checkbox" name="check" id="checkbox"><br><br>
+
+        <label for="exp">How was your experience with us? (0/10)</label>
+        <input type="number" name="exp" id="exp" max="10" mmin="0">
+
+    </form>
+
+    <script src="scripts/form.js"></script>
+    <script src="scripts/cart.js"></script>
+    <link href="Styles.css" rel="stylesheet" type="text/css">
+</body>
+</html>
